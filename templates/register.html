@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center bg-light">
+        <div class="row justify-content-center align-items-center w-100">
+            <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center">
+                <img src="{{ url_for('static', filename='images/undraw_Events_re_98ue.png') }}" alt="Register Illustration" class="img-fluid">
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="login-container bg-white p-4 shadow rounded">
+                    <h2 class="text-center mb-4">Create Account</h2>
+
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="alert alert-warning">
+                            <ul>
+                                {% for message in messages %}
+                                <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                    {% endwith %}
+
+                    <form id="registerForm" method="POST" action="{{ url_for('register') }}">
+                        {{ form.hidden_tag() }}
+
+                        <div class="form-group mb-3">
+                            <div class="input-group">
+                                <div class="input-group-text bg-light">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <input type="text" name="username" class="form-control" placeholder="Username" id="username" autocomplete="username" value="{{ form.username.data if form.username.data else '' }}">
+                            </div>
+                            {% if form.username.errors %}
+                                <ul class="error-list text-danger">
+                                    {% for error in form.username.errors %}
+                                    <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <div class="input-group">
+                                <div class="input-group-text bg-light">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <input type="email" name="email" class="form-control" placeholder="example@gmail.com" id="email" autocomplete="email" value="{{ form.email.data if form.email.data else '' }}">
+                            </div>
+                            {% if form.email.errors %}
+                                <ul class="error-list text-danger">
+                                    {% for error in form.email.errors %}
+                                    <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <div class="input-group">
+                                <div class="input-group-text bg-light">
+                                    <i class="bi bi-key"></i>
+                                </div>
+                                <input type="password" name="password" class="form-control" placeholder="Password" id="password-field" autocomplete="new-password">
+                            </div>
+                            {% if form.password.errors %}
+                                <ul class="error-list text-danger">
+                                    {% for error in form.password.errors %}
+                                    <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Register</button>
+
+                        <div class="text-center">
+                            <small class="text-muted">Already have an account? <a href="{{ url_for('login') }}">Login</a></small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

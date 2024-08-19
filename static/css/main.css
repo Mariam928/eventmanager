@@ -1,0 +1,202 @@
+.purple-bar {
+    background-color: #6c63ff; 
+    height: 60px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 0 0 15px 15px; 
+    color: white;
+}
+
+.purple-bar h2 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem; 
+    margin: 0;
+    color: white; 
+}
+
+.toggle-menu-icon {
+    font-size: 1.5rem; 
+    cursor: pointer;
+}
+
+.add-event-icon {
+    font-size: 1.5rem; 
+    cursor: pointer;
+    color: white; 
+}
+
+.search-bar {
+    max-width: 600px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar .input-group-text {
+    background-color: transparent;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.search-bar .form-control {
+    border: none;
+    border-radius: 50px;
+    box-shadow: none;
+    padding-left: 0;
+}
+
+.input-group-text .bi-search {
+    color: #6c757d; 
+    font-size: 1.2rem; 
+}
+
+.event-result {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-result h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.event-result p {
+    margin-bottom: 5px;
+    color: #6c757d;
+}
+
+.event-card {
+    max-width: 500px; 
+    margin: 0 auto 20px; 
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h5 {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.event-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.event-image {
+    object-fit: cover; 
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; 
+    max-width: 450px;
+    max-height: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+.event-card-content {
+    padding: 15px;
+}
+
+.badge {
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+.bi-chat-dots {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.btn-outline-primary {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+    color: white;
+}
+
+.btn-outline-primary:hover {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+
+.rsvp-btn {
+    background-color: #6c63ff; 
+    color: white;
+    border: none;
+}
+
+.rsvp-btn:hover {
+    background-color: #6c63ff; 
+}
+
+.comment-icon i {
+    color: #6c63ff; 
+}
+
+.delete-btn {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #6c63ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 0 10px 10px 0;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.toggle-menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.add-event-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}

@@ -1,0 +1,71 @@
+.purple-bar {
+    background-color: #6c63ff; 
+    height: 60px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 0 0 15px 15px; 
+    color: white;
+}
+
+.purple-bar h2 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem; 
+    margin: 0;
+    color: white; 
+}
+
+.toggle-menu-icon {
+    font-size: 1.5rem; 
+    cursor: pointer;
+}
+
+.add-event-icon {
+    font-size: 1.5rem; 
+    cursor: pointer;
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    background-color: #6c63ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+    background-color: #5a54d4;
+}
+
+.mb-3 label {
+    font-weight: bold;
+    color: #6c63ff;
+}
+.event-card img {
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
